@@ -1,0 +1,24 @@
+[   {
+            "Id":1,
+            "Name":"DISTRIBUTOR1",
+            "PDI":-1,
+            "INCLUDE": [{"City_Code":"","Province_Code":"","Country_Code":"IN"},{"City_Code":"","Province_Code":"","Country_Code":"US"}],
+            "EXCLUDE": [{"City_Code":"","Province_Code":"KA","Country_Code":"IN"},{"City_Code":"CENAI","Province_Code":"TN","Country_Code":"IN"}]
+      },
+      
+      {
+              "Id":2,
+              "Name":"DISTRIBUTOR2",
+              "PDI":1,      
+              "INCLUDE": [{"City_Code":"","Province_Code":"","Country_Code":"IN"}],
+              "EXCLUDE": [{"City_Code":"","Province_Code":"TN","Country_Code":"IN"}] 
+                
+        },
+        {
+            "Id":3,
+            "Name": "DISTRIBUTOR3",
+            "PDI":2, 
+            "INCLUDE": [{"City_Code":"","Province_Code":"KL","Country_Code":"IN"}],
+          "EXCLUDE": [ ]
+    }
+]
