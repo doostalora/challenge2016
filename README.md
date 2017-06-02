@@ -1,3 +1,17 @@
+Solution summary:
+install npm packages
+run app.js file
+
+Arrangement of distributor data is available in app_data folder
+
+impotant routes
+/checkforpermission?country=IN&province=UP&city=LT&distributor=1
+/getcountrys
+
+
+
+
+
 # Real Image Challenge 2016
 
 In the cinema business, a feature film is usually provided to a regional distributor based on a contract for exhibition in a particular geographical territory.
