@@ -1,11 +1,11 @@
 
-***********Solution summary:
+# Solution summary:
 install npm packages
 run app.js file
 
 Arrangement of distributor data is available in app_data folder
 
-***********impotant routes
+# impotant routes
 /checkforpermission?country=IN&province=UP&city=LT&distributor=1
 /getcountrys
 /getcities?country=IN&province=MR
