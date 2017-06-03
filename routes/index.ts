@@ -1,4 +1,4 @@
-﻿
+
 import express = require('express');
 var fs = require('fs');
 var cities;
@@ -71,14 +71,38 @@ export function checkPermissionOfDistributor(req,res){
                         }
                     }
 
+                    var count = -1;
                     for (var j = 0; j < listOfSelectedDistributorInclude.length; j++) {
-                        if (listOfSelectedDistributorInclude[i].Province_Code === selectedProvinceCode) {
-                            res.send({ "Response": true });
-                            return;
+                        if (listOfSelectedDistributorInclude[j].Province_Code !== '') {
+                            count++;
+                        }
+                        if (listOfSelectedDistributorInclude[j].Province_Code === selectedProvinceCode) {
+                            var count2 = -1;
+                            for (var l = 0; l < listOfSelectedDistributorInclude.length; l++) {
+                                if (listOfSelectedDistributorInclude[l].City_Code!=''){
+                                    count2++;
+                                }
+                                if (listOfSelectedDistributorInclude[l].City_Code == selectedCityCode) {
+                                    res.send({ "Response": true });
+                                    return;
+                                }
+                            }
+                            if (count2 == -1) {
+                                res.send({ "Response": true });
+                                return;
+                            } else {
+                                res.send({ "Response": false });
+                                return;
+                            }
                         }
                     }
-                    res.send({ "Response": false });
-                    return;   
+                    if (count == -1) {
+                        res.send({ "Response": true });
+                        return;
+                    } else {
+                        res.send({ "Response": false });
+                        return;
+                    }
                     
                 }
                 if (i == listOfSelectedDistributorInclude.length) {
